@@ -209,13 +209,13 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
 - ![Prom-grafana-10](./images/Prom-grafana-10.png)
 - ![Prom-grafana-11](./images/Prom-grafana-11.png)
 
-- ![promql-1](./images/promql-1.png)
-- ![promql-2](./images/promql-2.png)
-- ![promql-3](./images/promql-3.png)
+- ![promql-1](./images/Promql-1.png)
+- ![promql-2](./images/Promql-2.png)
+- ![promql-3](./images/Promql-3.png)
 - ![promql-4](./images/promql-4.png)
 - ![promql-5](./images/promql-5.png)
-- ![promql-6](./images/promql-6.png)
-- ![promql-7](./images/promql-7.png)
+- ![promql-6](./images/Promql-6.png)
+- ![promql-7](./images/Promql-7.png)
 - ![promql-8](./images/promql-8.png)
 - ![promql-9](./images/promql-9.png)
 
