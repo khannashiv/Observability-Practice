@@ -192,7 +192,7 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
 
 ---
 
-## Outcomes of Prometheus and Grafana hands-on practice:
+## **Outcomes of Prometheus and Grafana hands-on practice**
 - Successfully set up Prometheus and Grafana in a Kubernetes cluster using Helm.
 - Created sample / custom dashboards in Grafana to visualize metrics.
 
