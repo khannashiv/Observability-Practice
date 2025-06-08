@@ -189,6 +189,7 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
     kube_pod_container_status_restarts_total{pod="nginx"}
 ```
 *Total restarts for the `nginx` pod.*
+---
 
 ## Outcomes of Prometheus and Grafana hands-on practice:
 - Successfully set up Prometheus and Grafana in a Kubernetes cluster using Helm.
@@ -227,6 +228,4 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
 
 - ![Alert-manager-1](./images/Alert-manager-1.png)
 
-
-
-
+---
