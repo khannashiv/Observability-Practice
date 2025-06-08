@@ -126,7 +126,7 @@ eksctl delete cluster --name observability
 
 ## Some common PromQL queries for practice.
 
-#### 1. Basic Metric Query
+### 1. Basic Metric Query
 ```promql
 up
 ```
@@ -134,7 +134,7 @@ up
 
 ---
 
-## 2. CPU Usage (Node Exporter)
+### 2. CPU Usage (Node Exporter)
 ```promql
 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
 ```
