@@ -1,5 +1,104 @@
 # Outcomes of Prometheus and Grafana hands-on practice & PromQL Queries for Practice.
 
+## Refrence Documentation:
+- [Scoop - Windows command-line installer](https://scoop.sh/)
+- [Helm - Installation Guide](https://helm.sh/docs/intro/install/)
+- [AWS EKS - Using Helm](https://docs.aws.amazon.com/eks/latest/userguide/helm.html)
+- [Grafana Documentation](https://grafana.com/docs/grafana/latest/)
+- [Prometheus Documentation](https://prometheus.io/docs/introduction/overview/)
+- [Prometheus Metrics Documentation](https://prometheus.io/docs/concepts/metric_types/)
+- [Prometheus (GitHub)](https://github.com/prometheus/prometheus/)
+- [Prometheus Community Helm Charts (GitHub)](https://github.com/prometheus-community/helm-charts)
+- [Prometheus Query Language (PromQL) Documentation](https://prometheus.io/docs/prometheus/latest/querying/basics/)
+- [PromQL Query Examples](https://prometheus.io/docs/prometheus/latest/querying/examples/)
+
+## Commands used while practicing Prometheus and Grafana:
+```bash
+# Install Scoop (Windows package manager)
+Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+
+# Set PowerShell execution policy to allow running scripts
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# Install Helm (Kubernetes package manager) using Scoop
+scoop install helm
+
+# List files in the current directory (Windows)
+dir
+
+# Add the Prometheus Community Helm charts repository
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+
+# Update local Helm chart repository cache
+helm repo update
+
+# Create a new Kubernetes namespace called 'monitoring'
+kubectl create ns monitoring
+
+# List all pods across all namespaces
+kubectl get pods -A
+
+# Install the kube-prometheus-stack Helm chart with custom values
+helm install monitoring prometheus-community/kube-prometheus-stack -n monitoring -f ./custom_kube_prometheus_stack.yml
+
+# Get pods in the 'monitoring' namespace with label 'release=monitoring'
+kubectl --namespace monitoring get pods -l "release=monitoring"
+
+# List all pods in the 'monitoring' namespace
+kubectl get pods -n monitoring
+
+# List all services in the 'monitoring' namespace
+kubectl get svc -n monitoring
+
+# Search for charts in the prometheus-community Helm repo
+helm search repo prometheus-community
+
+# Filter search results for the kube-prometheus-stack chart
+helm search repo prometheus-community | grep prometheus-community/kube-prometheus-stack
+
+# List all Helm releases in the 'monitoring' namespace
+helm list -n monitoring
+
+# List all Helm repositories added locally
+helm repo list
+
+# Forward local port 9090 to Prometheus service in the cluster
+kubectl port-forward svc/prometheus-operated -n monitoring 9090:9090
+
+# Forward local port 9093 to Alertmanager service in the cluster
+kubectl port-forward svc/alertmanager-operated -n monitoring 9093:9093
+
+# Forward local port 8081 to Grafana service in the cluster
+kubectl port-forward svc/monitoring-grafana -n monitoring 8081:80
+
+# List all secrets in the 'monitoring' namespace
+kubectl get secrets -n monitoring
+
+# Retrieve the Grafana admin password from the secret and decode it
+kubectl --namespace monitoring get secrets monitoring-grafana -o jsonpath="{.data.admin-password}" | base64 -d ; echo
+
+# List all pods in the 'monitoring' namespace (repeated for status checks)
+kubectl get pods -n monitoring
+
+# List all services in the 'monitoring' namespace (repeated for status checks)
+kubectl get svc -n monitoring
+
+# Deploy a faulty pod to test monitoring and alerting
+kubectl apply -f faulty-pod.yaml
+
+# List all pods in the 'default' namespace
+kubectl get pods -n default
+
+# Export the YAML definition of the 'opensearch-0' pod in the 'default' namespace
+kubectl get pod opensearch-0 -n default -o yaml > demo.yaml
+
+# PromQL query to get restarts for the 'nginx' pod (for use in Prometheus/Grafana)
+kube_pod_container_status_restarts_total{pod="nginx"}
+```
+
+Prometheus and Grafana are powerful tools for monitoring and visualizing metrics in a Kubernetes environment. Below are some common PromQL queries that can be used to extract useful metrics from Prometheus, along with explanations of what each query does.
+# Prometheus and Grafana Practice: Common PromQL Queries
+
 ## 1. Basic Metric Query
 ```promql
 up
@@ -87,90 +186,6 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
     kube_pod_container_status_restarts_total{pod="nginx"}
 ```
 *Total restarts for the `nginx` pod.*
-
-## Commands used while practicing Prometheus and Grafana:
-```bash
-# Install Scoop (Windows package manager)
-Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-
-# Set PowerShell execution policy to allow running scripts
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-# Install Helm (Kubernetes package manager) using Scoop
-scoop install helm
-
-# List files in the current directory (Windows)
-dir
-
-# Add the Prometheus Community Helm charts repository
-helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-
-# Update local Helm chart repository cache
-helm repo update
-
-# Create a new Kubernetes namespace called 'monitoring'
-kubectl create ns monitoring
-
-# List all pods across all namespaces
-kubectl get pods -A
-
-# Install the kube-prometheus-stack Helm chart with custom values
-helm install monitoring prometheus-community/kube-prometheus-stack -n monitoring -f ./custom_kube_prometheus_stack.yml
-
-# Get pods in the 'monitoring' namespace with label 'release=monitoring'
-kubectl --namespace monitoring get pods -l "release=monitoring"
-
-# List all pods in the 'monitoring' namespace
-kubectl get pods -n monitoring
-
-# List all services in the 'monitoring' namespace
-kubectl get svc -n monitoring
-
-# Search for charts in the prometheus-community Helm repo
-helm search repo prometheus-community
-
-# Filter search results for the kube-prometheus-stack chart
-helm search repo prometheus-community | grep prometheus-community/kube-prometheus-stack
-
-# List all Helm releases in the 'monitoring' namespace
-helm list -n monitoring
-
-# List all Helm repositories added locally
-helm repo list
-
-# Forward local port 9090 to Prometheus service in the cluster
-kubectl port-forward svc/prometheus-operated -n monitoring 9090:9090
-
-# Forward local port 9093 to Alertmanager service in the cluster
-kubectl port-forward svc/alertmanager-operated -n monitoring 9093:9093
-
-# Forward local port 8081 to Grafana service in the cluster
-kubectl port-forward svc/monitoring-grafana -n monitoring 8081:80
-
-# List all secrets in the 'monitoring' namespace
-kubectl get secrets -n monitoring
-
-# Retrieve the Grafana admin password from the secret and decode it
-kubectl --namespace monitoring get secrets monitoring-grafana -o jsonpath="{.data.admin-password}" | base64 -d ; echo
-
-# List all pods in the 'monitoring' namespace (repeated for status checks)
-kubectl get pods -n monitoring
-
-# List all services in the 'monitoring' namespace (repeated for status checks)
-kubectl get svc -n monitoring
-
-# Deploy a faulty pod to test monitoring and alerting
-kubectl apply -f faulty-pod.yaml
-
-# List all pods in the 'default' namespace
-kubectl get pods -n default
-
-# Export the YAML definition of the 'opensearch-0' pod in the 'default' namespace
-kubectl get pod opensearch-0 -n default -o yaml > demo.yaml
-
-# PromQL query to get restarts for the 'nginx' pod (for use in Prometheus/Grafana)
-kube_pod_container_status_restarts_total{pod="nginx"}
-```
 
 ## Outcomes of Prometheus and Grafana hands-on practice:
 - Successfully set up Prometheus and Grafana in a Kubernetes cluster using Helm.
