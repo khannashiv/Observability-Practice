@@ -219,9 +219,11 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
 ## **Outcomes of Prometheus and Grafana hands-on practice**
 - Successfully set up Prometheus and Grafana in a Kubernetes cluster using Helm.
 - Created sample / custom dashboards in Grafana to visualize metrics.
-
+---
 - ![Prom-grafana-scoop-0](./images/Prom-grafana-scoop-0.png)
 - ![Prom-grafana-scoop-1](./images/Prom-grafana-scoop-1.png)
+
+---
 
 - ![Prom-grafana-1](./images/Prom-grafana-1.png)
 - ![Prom-grafana-2](./images/Prom-grafana-2.png)
@@ -235,6 +237,8 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
 - ![Prom-grafana-10](./images/Prom-grafana-10.png)
 - ![Prom-grafana-11](./images/Prom-grafana-11.png)
 
+---
+
 - ![promql-1](./images/Promql-1.png)
 - ![promql-2](./images/Promql-2.png)
 - ![promql-3](./images/Promql-3.png)
@@ -244,6 +248,8 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
 - ![promql-7](./images/Promql-7.png)
 - ![promql-8](./images/promql-8.png)
 - ![promql-9](./images/promql-9.png)
+
+---
 
 - ![Grafana-1](./images/Grafana-1.png)
 - ![Grafana-2](./images/Grafana-2.png)
@@ -256,6 +262,8 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
 - ![Grafana-9](./images/Grafana-9.png)
 - ![Grafana-10](./images/Grafana-10.png)
 - ![Grafana-11](./images/Grafana-11.png)
+
+---
 
 - ![Alert-manager-1](./images/Alert-manager-1.png)
 
