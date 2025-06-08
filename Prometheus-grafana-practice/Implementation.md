@@ -20,11 +20,10 @@ Please refer to the below repository for detailed instructions (includes prerequ
 
 - [Observability Zero to Hero by iam-Veeramalla](https://github.com/iam-veeramalla/observability-zero-to-hero)
 
-
 ## Commands used while practicing Prometheus and Grafana.
 
 ```bash
-# Make sure you have eks cluster running, other prerequisites set as per the above repo i.e. Observability 
+# Make sure we have eks cluster running, other prerequisites set as per the above repo i.e. Observability 
 # Zero  to Hero by iam-Veeramalla and kubectl configured to access it before running following commands.
 
 # Install Scoop (Windows package manager)
@@ -219,7 +218,9 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
 ## **Outcomes of Prometheus and Grafana hands-on practice**
 - Successfully set up Prometheus and Grafana in a Kubernetes cluster using Helm.
 - Created sample / custom dashboards in Grafana to visualize metrics.
+
 ---
+
 - ![Prom-grafana-scoop-0](./images/Prom-grafana-scoop-0.png)
 - ![Prom-grafana-scoop-1](./images/Prom-grafana-scoop-1.png)
 
