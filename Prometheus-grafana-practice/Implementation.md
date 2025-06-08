@@ -121,7 +121,8 @@ eksctl delete cluster --name observability
 
 ```
 
-- Prometheus and Grafana are powerful tools for monitoring and visualizing metrics in a Kubernetes environment. Below are some common PromQL queries that can be used to extract useful metrics from Prometheus, along with explanations of what each query does.
+- Prometheus and Grafana are powerful tools for monitoring and visualizing metrics in a Kubernetes environment. 
+- Below are some common PromQL queries that can be used to extract useful metrics from Prometheus, along with explanations of what each query does.
 
 ## Some common PromQL queries for practice.
 
