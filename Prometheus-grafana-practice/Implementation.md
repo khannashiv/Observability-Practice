@@ -142,7 +142,7 @@ up
 
 ---
 
-## 3. Memory Usage (Node Exporter)
+### 3. Memory Usage (Node Exporter)
 ```promql
 node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes
 ```
@@ -150,7 +150,7 @@ node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes
 
 ---
 
-## 4. HTTP Request Rate (per second)
+### 4. HTTP Request Rate (per second)
 ```promql
 sum(rate(http_requests_total[1m]))
 ```
@@ -158,7 +158,7 @@ sum(rate(http_requests_total[1m]))
 
 ---
 
-## 5. Error Rate (HTTP 5xx)
+### 5. Error Rate (HTTP 5xx)
 ```promql
 sum(rate(http_requests_total{status=~"5.."}[5m]))
 ```
@@ -166,7 +166,7 @@ sum(rate(http_requests_total{status=~"5.."}[5m]))
 
 ---
 
-## 6. Top 5 High CPU Usage Instances
+### 6. Top 5 High CPU Usage Instances
 ```promql
 topk(5, 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100))
 ```
@@ -174,7 +174,7 @@ topk(5, 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m]))
 
 ---
 
-## 7. Disk Space Usage Percentage
+### 7. Disk Space Usage Percentage
 ```promql
 (node_filesystem_size_bytes{mountpoint="/"} - node_filesystem_free_bytes{mountpoint="/"}) 
 / node_filesystem_size_bytes{mountpoint="/"} * 100
@@ -183,7 +183,7 @@ topk(5, 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m]))
 
 ---
 
-## 8. Pod Restarts (Kubernetes)
+### 8. Pod Restarts (Kubernetes)
 ```promql
 sum(increase(kube_pod_container_status_restarts_total[1h])) by (pod)
 ```
@@ -191,7 +191,7 @@ sum(increase(kube_pod_container_status_restarts_total[1h])) by (pod)
 
 ---
 
-## 9. Average Latency (Histogram)
+### 9. Average Latency (Histogram)
 ```promql
 rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds_count[5m])
 ```
@@ -199,7 +199,7 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
 
 ---
 
-## 10. Alert: High CPU Usage (>80%)
+### 10. Alert: High CPU Usage (>80%)
 ```promql
 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
 ```
@@ -207,7 +207,7 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
 
 ---
 
-## 11. Pod Restarts for a Specific Pod
+### 11. Pod Restarts for a Specific Pod
 
 ```promql  
     kube_pod_container_status_restarts_total{pod="nginx"}
