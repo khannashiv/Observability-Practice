@@ -189,6 +189,7 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
     kube_pod_container_status_restarts_total{pod="nginx"}
 ```
 *Total restarts for the `nginx` pod.*
+
 ---
 
 ## Outcomes of Prometheus and Grafana hands-on practice:
