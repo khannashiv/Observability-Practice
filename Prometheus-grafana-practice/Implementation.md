@@ -126,7 +126,7 @@ eksctl delete cluster --name observability
 
 ## Some common PromQL queries for practice.
 
-## 1. Basic Metric Query
+#### 1. Basic Metric Query
 ```promql
 up
 ```
