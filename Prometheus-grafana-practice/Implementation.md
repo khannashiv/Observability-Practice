@@ -1,6 +1,6 @@
-# Outcomes of Prometheus and Grafana hands-on practice & PromQL Queries for Practice.
+# Prometheus and Grafana hands-on practice & PromQL Queries.
 
-## Refrence Documentation:
+## Refrence Documentation.
 - [Scoop - Windows command-line installer](https://scoop.sh/)
 - [Helm - Installation Guide](https://helm.sh/docs/intro/install/)
 - [AWS EKS - Using Helm](https://docs.aws.amazon.com/eks/latest/userguide/helm.html)
@@ -12,7 +12,7 @@
 - [Prometheus Query Language (PromQL) Documentation](https://prometheus.io/docs/prometheus/latest/querying/basics/)
 - [PromQL Query Examples](https://prometheus.io/docs/prometheus/latest/querying/examples/)
 
-## For Hands-on Practice with Prometheus and Grafana
+## For Hands-on practice with Prometheus and Grafana.
 
 <!-- 
 Please refer to the below repository for detailed instructions (includes prerequsites) on setting up Prometheus and Grafana in a Kubernetes environment, including sample dashboards and configurations. 
@@ -21,7 +21,8 @@ Please refer to the below repository for detailed instructions (includes prerequ
 - [Observability Zero to Hero by iam-Veeramalla](https://github.com/iam-veeramalla/observability-zero-to-hero)
 
 
-## Commands used while practicing Prometheus and Grafana:
+## Commands used while practicing Prometheus and Grafana.
+
 ```bash
 # Make sure you have eks cluster running, other prerequisites set as per the above repo i.e. Observability 
 # Zero  to Hero by iam-Veeramalla and kubectl configured to access it before running following commands.
@@ -120,8 +121,9 @@ eksctl delete cluster --name observability
 
 ```
 
-Prometheus and Grafana are powerful tools for monitoring and visualizing metrics in a Kubernetes environment. Below are some common PromQL queries that can be used to extract useful metrics from Prometheus, along with explanations of what each query does.
-# Some common PromQL queries for practice.
+- Prometheus and Grafana are powerful tools for monitoring and visualizing metrics in a Kubernetes environment. Below are some common PromQL queries that can be used to extract useful metrics from Prometheus, along with explanations of what each query does.
+
+## Some common PromQL queries for practice.
 
 ## 1. Basic Metric Query
 ```promql
