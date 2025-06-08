@@ -211,6 +211,13 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
 
 - ![promql-1](./images/promql-1.png)
 - ![promql-2](./images/promql-2.png)
+- ![promql-3](./images/promql-3.png)
+- ![promql-4](./images/promql-4.png)
+- ![promql-5](./images/promql-5.png)
+- ![promql-6](./images/promql-6.png)
+- ![promql-7](./images/promql-7.png)
+- ![promql-8](./images/promql-8.png)
+- ![promql-9](./images/promql-9.png)
 
 - ![Grafana-1](./images/Grafana-1.png)
 - ![Grafana-2](./images/Grafana-2.png)
