@@ -100,7 +100,7 @@ kube_pod_container_status_restarts_total{pod="nginx"}
 ```
 
 Prometheus and Grafana are powerful tools for monitoring and visualizing metrics in a Kubernetes environment. Below are some common PromQL queries that can be used to extract useful metrics from Prometheus, along with explanations of what each query does.
-# Prometheus and Grafana Practice: Common PromQL Queries
+# Some common PromQL queries for practice.
 
 ## 1. Basic Metric Query
 ```promql
