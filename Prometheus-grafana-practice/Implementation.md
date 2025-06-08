@@ -12,6 +12,9 @@
 - [Prometheus Query Language (PromQL) Documentation](https://prometheus.io/docs/prometheus/latest/querying/basics/)
 - [PromQL Query Examples](https://prometheus.io/docs/prometheus/latest/querying/examples/)
 
+### For Hands-on Practice with Prometheus and Grafana
+- [Observability Zero to Hero by iam-Veeramalla](https://github.com/iam-veeramalla/observability-zero-to-hero)
+
 ## Commands used while practicing Prometheus and Grafana:
 ```bash
 # Install Scoop (Windows package manager)
