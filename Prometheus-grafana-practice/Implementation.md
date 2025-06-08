@@ -13,7 +13,13 @@
 - [PromQL Query Examples](https://prometheus.io/docs/prometheus/latest/querying/examples/)
 
 ## For Hands-on Practice with Prometheus and Grafana
+
+<!-- 
+Please refer to the below repository for detailed instructions (includes prerequsites) on setting up Prometheus and Grafana in a Kubernetes environment, including sample dashboards and configurations. 
+-->
+
 - [Observability Zero to Hero by iam-Veeramalla](https://github.com/iam-veeramalla/observability-zero-to-hero)
+
 
 ## Commands used while practicing Prometheus and Grafana:
 ```bash
@@ -97,6 +103,18 @@ kubectl get pod opensearch-0 -n default -o yaml > demo.yaml
 
 # PromQL query to get restarts for the 'nginx' pod (for use in Prometheus/Grafana)
 kube_pod_container_status_restarts_total{pod="nginx"}
+
+# Cleanup Commands.
+
+# Uninstall the 'monitoring' Helm release from the 'monitoring' namespace
+helm uninstall monitoring --namespace monitoring
+
+# Delete the 'monitoring' namespace and all resources within it from the Kubernetes cluster
+kubectl delete ns monitoring
+
+# Delete the entire EKS (Elastic Kubernetes Service) cluster named 'observability'
+eksctl delete cluster --name observability
+
 ```
 
 Prometheus and Grafana are powerful tools for monitoring and visualizing metrics in a Kubernetes environment. Below are some common PromQL queries that can be used to extract useful metrics from Prometheus, along with explanations of what each query does.
