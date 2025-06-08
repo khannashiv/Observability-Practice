@@ -24,7 +24,7 @@ Please refer to the below repository for detailed instructions (includes prerequ
 
 ```bash
 # Make sure we have eks cluster running, other prerequisites set as per the above repo i.e. Observability 
-# Zero  to Hero by iam-Veeramalla and kubectl configured to access it before running following commands.
+# Zero to Hero by iam-Veeramalla and kubectl configured to access it before running following commands.
 
 # Install Scoop (Windows package manager)
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
