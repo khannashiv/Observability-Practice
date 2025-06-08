@@ -225,6 +225,12 @@ rate(http_request_duration_seconds_sum[5m]) / rate(http_request_duration_seconds
 - ![Grafana-3](./images/Grafana-3.png)
 - ![Grafana-4](./images/Grafana-4.png)
 - ![Grafana-5](./images/Grafana-5.png)
+- ![Grafana-6](./images/Grafana-6.png)
+- ![Grafana-7](./images/Grafana-7.png)
+- ![Grafana-8](./images/Grafana-8.png)
+- ![Grafana-9](./images/Grafana-9.png)
+- ![Grafana-10](./images/Grafana-10.png)
+- ![Grafana-11](./images/Grafana-11.png)
 
 - ![Alert-manager-1](./images/Alert-manager-1.png)
 
