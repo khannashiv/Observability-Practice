@@ -134,7 +134,7 @@ kubectl apply -k alerts-alertmanager-servicemonitor-manifest/
 - `<<LOAD_BALANCER_DNS_NAME>>/crash`
 - You should receive an email once the application container has restarted at least 3 times.
 
-## Outcomes of Handson in the form of screenshots
+## Outcomes of custom metric implementation along with alertmanager.
 ---
 
 ![Custom Metrics-1](images/custom-metrics-1.png)
