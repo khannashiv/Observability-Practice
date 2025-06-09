@@ -22,12 +22,12 @@ spec:
   receivers:
   - name: 'send-email'
     emailConfigs:
-    - to: shiv.khanna29@gmail.com
-      from: shiv.khanna29@gmail.com
+    - to: Your_Email_Address
+      from: Your_Email_Address
       sendResolved: false
       smarthost: smtp.gmail.com:587
-      authUsername: shiv.khanna29@gmail.com
-      authIdentity: shiv.khanna29@gmail.com
+      authUsername: Your_Email_Address
+      authIdentity: Your_Email_Address
       authPassword:
         name: mail-pass
         key: gmail-pass
