@@ -154,3 +154,11 @@ kubectl apply -k alerts-alertmanager-servicemonitor-manifest/
 ![Custom Metrics-15](images/custom-metrics-15.png)
 
 ---
+
+### Some Reference Links
+
+- [Creating a Service Monitor in Kubernetes (dev.to)](https://dev.to/apgapg/creating-a-service-monitor-in-k8s-nl8)
+- [Prometheus Operator Example App Service Monitor (GitHub)](https://github.com/prometheus-operator/prometheus-operator/blob/main/example/user-guides/getting-started/example-app-service-monitor.yaml)
+- [Prometheus Operator Alerting Documentation](https://prometheus-operator.dev/docs/developer/alerting/)
+
+---

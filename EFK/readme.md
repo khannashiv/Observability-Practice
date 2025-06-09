@@ -129,3 +129,9 @@ kubectl delete -k alerts-alertmanager-servicemonitor-manifest/
 eksctl delete cluster --name observability
 
 ```
+
+### Some refernces
+- [Fluentbit Documentation](https://docs.fluentbit.io/manual/installation/kubernetes)
+- [Kibana Documentation](https://www.elastic.co/guide/en/kibana/current/index.html)
+- [Elasticsearch Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
+- [Fluent Bit Lua Filter Documentation](https://docs.fluentbit.io/manual/pipeline/filters/lua)
