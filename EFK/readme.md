@@ -135,3 +135,16 @@ eksctl delete cluster --name observability
 - [Kibana Documentation](https://www.elastic.co/guide/en/kibana/current/index.html)
 - [Elasticsearch Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
 - [Fluent Bit Lua Filter Documentation](https://docs.fluentbit.io/manual/pipeline/filters/lua)
+
+---
+
+## Outcomes of EFK Stack in the form of screenshots
+
+- ![EFK-1](./images/EFK-1.png)
+- ![EFK-2](./images/EFK-2.png)
+- ![EFK-3](./images/EFK-3.png)
+- ![EFK-4](./images/EFK-4.png)
+- ![EFK-5](./images/EFK-5.png)
+- ![EFK-6](./images/EFK-6.png)
+
+---
