@@ -133,3 +133,24 @@ kubectl apply -k alerts-alertmanager-servicemonitor-manifest/
 - To crash the application container, hit the following endpoint
 - `<<LOAD_BALANCER_DNS_NAME>>/crash`
 - You should receive an email once the application container has restarted at least 3 times.
+
+## Outcomes of Handson in the form of screenshots
+---
+
+![Custom Metrics-1](images/custom-metrics-1.png)
+![Custom Metrics-2](images/custom-metrics-2.png)
+![Custom Metrics-3](images/custom-metrics-3.png)
+![Custom Metrics-4](images/custom-metrics-4.png)
+![Custom Metrics-5](images/custom-metrics-5.png)
+![Custom Metrics-6](images/custom-metrics-6.png)
+![Custom Metrics-7](images/custom-metrics-7.png)
+![Custom Metrics-8](images/custom-metrics-8.png)
+![Custom Metrics-9](images/custom-metrics-9.png)
+![Custom Metrics-10](images/custom-metrics-10.png)
+![Custom Metrics-11](images/custom-metrics-11.png)
+![Custom Metrics-12](images/custom-metrics-12.png)
+![Custom Metrics-13](images/custom-metrics-13.png)
+![Custom Metrics-14](images/custom-metrics-14.png)
+![Custom Metrics-15](images/custom-metrics-15.png)
+
+---
