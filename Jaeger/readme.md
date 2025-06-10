@@ -17,10 +17,27 @@
 - 📝 **Logs**: Logs in a span provide details about what’s happening during that operation. They can capture events like errors or important checkpoints.
 - 🔗 **Context Propagation**: For Jaeger to trace requests across services, it needs to propagate context. This means each service in the call chain passes along the trace information to the next service.
 
+## 📊 Jaeger Architecture
+
+```mermaid
+    graph TD
+        SDK["OpenTelemetry SDK"] --> |HTTP or gRPC| COLLECTOR
+        COLLECTOR["Jaeger Collector"] --> STORE[Storage]
+        COLLECTOR --> |gRPC| PLUGIN[Storage Plugin]
+        COLLECTOR --> |gRPC/sampling| SDK
+        PLUGIN --> STORE
+        QUERY[Jaeger Query Service] --> STORE
+        QUERY --> |gRPC| PLUGIN
+        UI[Jaeger UI] --> |HTTP| QUERY
+        subgraph Application Host
+            subgraph User Application
+                SDK
+            end
+        end
+```
+
 # 🏠 Architecture
 ![Project Architecture](images/architecture.gif)
-
-
 
 ## ⚙️ Setting Up Jaeger
 
@@ -91,7 +108,7 @@ helm uninstall elasticsearch -n logging
 
 helm uninstall monitoring -n monitoring
 
-cd day-4
+cd Custom-metric-Instrumentation-alertmanager
 
 kubectl delete -k kubernetes-manifest/
 
@@ -101,4 +118,9 @@ kubectl delete -k alerts-alertmanager-servicemonitor-manifest/
 eksctl delete cluster --name observability
 
 ```
+### Some refernces
 
+- [Jaeger Documentation](https://www.jaegertracing.io/docs/)
+- [OpenTelemetry Documentation](https://opentelemetry.io/docs/)
+- [Jaeger GitHub Repository README](https://github.com/jaegertracing/jaeger/blob/main/README.md)
+- [Jaeger Helm Charts GitHub Repository](https://github.com/jaegertracing/helm-charts)

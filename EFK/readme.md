@@ -119,6 +119,8 @@ helm uninstall elasticsearch -n logging
 
 helm uninstall kibana -n logging
 
+cd Custom-metric-Instrumentation-alertmanager
+
 kubectl delete -k kubernetes-manifest/
 
 kubectl delete -k alerts-alertmanager-servicemonitor-manifest/
