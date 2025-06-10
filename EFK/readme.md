@@ -134,6 +134,7 @@ eksctl delete cluster --name observability
 - [Kibana Documentation](https://www.elastic.co/guide/en/kibana/current/index.html)
 - [Elasticsearch Documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)
 - [Fluent Bit Lua Filter Documentation](https://docs.fluentbit.io/manual/pipeline/filters/lua)
+- [Fluent Bit GitHub Repository](https://github.com/fluent/fluent-bit)
 
 ---
 
