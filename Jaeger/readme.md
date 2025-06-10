@@ -131,7 +131,7 @@ eksctl delete cluster --name observability
 
 ---
 
-- ![Jaeger-1](./images/jaeger-1.png)
+- ![Jaeger-1](./images/Jaeger-1.png)
 - ![Jaeger-2](./images/jaeger-2.png)
 - ![Jaeger-3](./images/jaeger-3.png)
 - ![Jaeger-4](./images/jaeger-4.png)
