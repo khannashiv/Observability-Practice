@@ -128,6 +128,9 @@ eksctl delete cluster --name observability
 ---
 
 ## Outcomes of EFK Stack in the form of screenshots
+
+---
+
 - ![Jaeger-1](./images/jaeger-1.png)
 - ![Jaeger-2](./images/jaeger-2.png)
 - ![Jaeger-3](./images/jaeger-3.png)
@@ -140,3 +143,5 @@ eksctl delete cluster --name observability
 - ![Jaeger-10](./images/jaeger-10.png)
 - ![Jaeger-11](./images/jaeger-11.png)
 - ![Jaeger-12](./images/jaeger-12.png)
+
+---
