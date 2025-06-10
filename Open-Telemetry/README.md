@@ -5,7 +5,7 @@
     - [OpenTelemetry Kubernetes Helm Demo](https://opentelemetry.io/docs/platforms/kubernetes/helm/demo/)
     - [OpenTelemetry Demo Architecture](https://opentelemetry.io/docs/demo/architecture/)
 
-**Commands to run and deploy demo open telemtry application**
+- **Commands to run and deploy demo open telemtry application**
 
 ```bash
 
