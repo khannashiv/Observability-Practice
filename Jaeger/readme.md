@@ -132,16 +132,16 @@ eksctl delete cluster --name observability
 ---
 
 - ![Jaeger-1](./images/Jaeger-1.png)
-- ![Jaeger-2](./images/jaeger-2.png)
-- ![Jaeger-3](./images/jaeger-3.png)
-- ![Jaeger-4](./images/jaeger-4.png)
-- ![Jaeger-5](./images/jaeger-5.png)
-- ![Jaeger-6](./images/jaeger-6.png)
-- ![Jaeger-7](./images/jaeger-7.png)
-- ![Jaeger-8](./images/jaeger-8.png)
-- ![Jaeger-9](./images/jaeger-9.png)
-- ![Jaeger-10](./images/jaeger-10.png)
-- ![Jaeger-11](./images/jaeger-11.png)
-- ![Jaeger-12](./images/jaeger-12.png)
+- ![Jaeger-2](./images/Jaeger-2.png)
+- ![Jaeger-3](./images/Jaeger-3.png)
+- ![Jaeger-4](./images/Jaeger-4.png)
+- ![Jaeger-5](./images/Jaeger-5.png)
+- ![Jaeger-6](./images/Jaeger-6.png)
+- ![Jaeger-7](./images/Jaeger-7.png)
+- ![Jaeger-8](./images/Jaeger-8.png)
+- ![Jaeger-9](./images/Jaeger-9.png)
+- ![Jaeger-10](./images/Jaeger-10.png)
+- ![Jaeger-11](./images/Jaeger-11.png)
+- ![Jaeger-12](./images/Jaeger-12.png)
 
 ---
