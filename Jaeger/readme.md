@@ -36,7 +36,7 @@
         end
 ```
 
-# 🏠 Architecture
+# 🏠 Project Architecture
 ![Project Architecture](images/architecture.gif)
 
 ## ⚙️ Setting Up Jaeger
