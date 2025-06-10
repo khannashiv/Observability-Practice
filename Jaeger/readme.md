@@ -118,9 +118,25 @@ kubectl delete -k alerts-alertmanager-servicemonitor-manifest/
 eksctl delete cluster --name observability
 
 ```
-### Some refernces
+## Some refernces
 
 - [Jaeger Documentation](https://www.jaegertracing.io/docs/)
 - [OpenTelemetry Documentation](https://opentelemetry.io/docs/)
 - [Jaeger GitHub Repository README](https://github.com/jaegertracing/jaeger/blob/main/README.md)
 - [Jaeger Helm Charts GitHub Repository](https://github.com/jaegertracing/helm-charts)
+
+---
+
+## Outcomes of EFK Stack in the form of screenshots
+- ![Jaeger-1](./images/jaeger-1.png)
+- ![Jaeger-2](./images/jaeger-2.png)
+- ![Jaeger-3](./images/jaeger-3.png)
+- ![Jaeger-4](./images/jaeger-4.png)
+- ![Jaeger-5](./images/jaeger-5.png)
+- ![Jaeger-6](./images/jaeger-6.png)
+- ![Jaeger-7](./images/jaeger-7.png)
+- ![Jaeger-8](./images/jaeger-8.png)
+- ![Jaeger-9](./images/jaeger-9.png)
+- ![Jaeger-10](./images/jaeger-10.png)
+- ![Jaeger-11](./images/jaeger-11.png)
+- ![Jaeger-12](./images/jaeger-12.png)
