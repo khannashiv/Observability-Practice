@@ -1,3 +1,14 @@
+####################
+
+# Metrics endpoint for Service A
+# This endpoint serves as an example of how to instrument custom metrics in a service.
+# It includes counters, histograms, summaries, and gauges.
+# The metrics are designed to be scraped by Prometheus.
+# The sample endpoint is accessible at:
+http://abee02e23041541a79e07242503a3d0e-392961308.us-east-1.elb.amazonaws.com/metrics
+
+#########################
+
 # HELP http_requests_total Total number of HTTP requests
 # TYPE http_requests_total counter
 http_requests_total{method="GET",path="/",status_code="200"} 8
